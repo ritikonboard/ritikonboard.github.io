@@ -1,142 +1,263 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/flowbite@2.5.1/dist/flowbite.min.css" rel="stylesheet" />
-
-    <title>Photography</title>
-
+    <title>My Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <style>
         * {
-            font-family: "DM Sans";
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
         }
-
-        .container {
-            max-width: 675px;
-            margin: 3% auto;
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+            line-height: 1.6;
+            font-weight: 200;
+        }
+        .header {
+            background: url("images/IMG_20240712_150501.jpg") no-repeat center center/cover;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: rgb(0, 0, 0);
+        }
+        .header h1 {
+            font-size: 4rem;
+            margin-bottom: 0.5rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+        .header p {
+            font-size: 1.2rem;
+        }
+        .portfolio-section {
+            max-width: 1200px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+        .portfolio-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 20px;
+        }
+        .portfolio-item {
+            position: relative;
+            background-color: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .portfolio-item:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+        .portfolio-item img,
+        .portfolio-item iframe {
+            width: 100%;
+            height: auto;
+        }
+        .portfolio-item .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.6);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+        .portfolio-item:hover .overlay {
+            opacity: 1;
+        }
+        .portfolio-item .overlay h3 {
+            color: white;
+            font-size: 1.5rem;
+            text-align: center;
+        }
+        .portfolio-social {
+            text-align: center;
+            margin-top: 40px;
+        }
+        .portfolio-social a {
+            font-size: 1.2rem;
+            text-decoration: none;
+            color: #333;
+            margin: 0 15px;
+            transition: color 0.3s;
+        }
+        .portfolio-social a:hover {
+            color: #007bff;
+        }
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #f3f3f3;
+            color: rgb(0, 0, 0);
         }
     </style>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Albert+Sans:wght@100..900&family=DM+Sans:wght@400;600&display=swap"
-        rel="stylesheet">
 </head>
-
 <body>
 
-    <p
-        class="text-3xl  pt-10 tracking-tighter leading-relaxed text-center font-semibold  my-auto text-gray-700 dark:text-white">
-        Ritik's Gallery</p>
+    <!-- Hero Header Section -->
+    <div class="header">
+        <div>
+           
+            <p>A visual showcase of my filmmaking and editing works</p>
+        </div>
+    </div>
 
-    <p
-        class="text-base whitespace-pre-line  tracking-tight leading-relaxed text-center font-semibold  my-auto text-gray-500 dark:text-white">
-        I like capturing the world through my lens and sharing my perspective with the <a
-            class="text-gray-900 underline dark:text-gray decoration-sky-500 decoration-wavy" href="#">world</a>.
-        Go back to my website <a class="text-gray-900 underline dark:text-gray decoration-sky-500 decoration-wavy"
-            href="index.html">here</a>.
-    </p>
+    <!-- Portfolio Section -->
+    <div class="portfolio-section">
+        <h3>Personal Projects</h3>
+        <div class="portfolio-grid">
 
-    <div class="container">
-
-
-        <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
-            <div class="grid gap-4">
-                <div>
-                    <img class="h-auto max-w-full rounded-lg"
-                        src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image.jpg" alt="">
-                </div>
-                <div>
-                    <img class="h-auto max-w-full rounded-lg"
-                        src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-1.jpg" alt="">
-                </div>
-                <div>
-                    <img class="h-auto max-w-full rounded-lg"
-                        src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-2.jpg" alt="">
-                </div>
-            </div>
-            <div class="grid gap-4">
-                <div>
-                    <img class="h-auto max-w-full rounded-lg"
-                        src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-3.jpg" alt="">
-                </div>
-                <div>
-                    <img class="h-auto max-w-full rounded-lg"
-                        src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-4.jpg" alt="">
-                </div>
-                <div>
-                    <img class="h-auto max-w-full rounded-lg"
-                        src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-5.jpg" alt="">
-                </div>
-            </div>
-            <div class="grid gap-4">
-                <div>
-                    <img class="h-auto max-w-full rounded-lg"
-                        src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-6.jpg" alt="">
-                </div>
-                <div>
-                    <img class="h-auto max-w-full rounded-lg"
-                        src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-7.jpg" alt="">
-                </div>
-                <div>
-                    <img class="h-auto max-w-full rounded-lg"
-                        src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-8.jpg" alt="">
-                </div>
-            </div>
-            <div class="grid gap-4">
-                <div>
-                    <img class="h-auto max-w-full rounded-lg"
-                        src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-9.jpg" alt="">
-                </div>
-                <div>
-                    <img class="h-auto max-w-full rounded-lg"
-                        src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-10.jpg" alt="">
-                </div>
-                <div>
-                    <img class="h-auto max-w-full rounded-lg"
-                        src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-11.jpg" alt="">
-                </div>
-            </div>
-            <div class="grid gap-4"></div>
-            <div>
-                <img class="h-auto max-w-full rounded-lg"
-                    src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-9.jpg" alt="">
-            </div>
-            <div>
-                <img class="h-auto max-w-full rounded-lg"
-                    src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-10.jpg" alt="">
-            </div>
-            <div>
-                <img class="h-auto max-w-full rounded-lg"
-                    src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-11.jpg" alt="">
+           
+            <!-- YouTube Video Thumbnail Example -->
+            <div class="portfolio-item"> 
+                <a href="https://www.youtube.com/watch?v=sp6-W1MVi4I" target="_blank">
+                    <img src="https://img.youtube.com/vi/sp6-W1MVi4I/maxresdefault.jpg" alt="YouTube Video Thumbnail">
+                </a>
+                <p>The Dream Wall</p>
             </div>
 
-            <div class="grid gap-4"></div>
-            <div>
-                <img class="h-auto max-w-full rounded-lg"
-                    src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-6.jpg" alt="">
+            <!-- Another YouTube Video Thumbnail Example -->
+            <div class="portfolio-item">
+                <a href="https://youtu.be/dUrw0owD8dE?si=5xBMsUOn79e0_dYD" target="_blank">
+                    <img src="https://img.youtube.com/vi/dUrw0owD8dE/maxresdefault.jpg" alt="YouTube Video Thumbnail">
+                </a>
+               
+                <p>A film about happiness</p>
             </div>
-            <div>
-                <img class="h-auto max-w-full rounded-lg"
-                    src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-7.jpg" alt="">
+
+            <div class="portfolio-item">
+                <a href="https://youtu.be/W8uHIIf0K5I?si=1M6zoSfEMX8nC6cW" target="_blank">
+                    <img src="https://img.youtube.com/vi/W8uHIIf0K5I/maxresdefault.jpg" alt="YouTube Video Thumbnail">
+                </a>
+                <p>60 days of summer</p>
             </div>
-            <div>
-                <img class="h-auto max-w-full rounded-lg"
-                    src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-8.jpg" alt="">
+
+            <div class="portfolio-item">
+                <a href="https://youtu.be/M8X9TDPrk6Y?si=YMTOiSAndXFR8sPR" target="_blank">
+                    <img src="https://img.youtube.com/vi/M8X9TDPrk6Y/maxresdefault.jpg" alt="YouTube Video Thumbnail">
+                </a>
+                <p>Turning the pages of time</p>
             </div>
+
+
+            
+            <div class="portfolio-item">
+                <a href="https://youtu.be/cOUZHEI9sro?si=2V5Cl7IWaR_Q6w6s" target="_blank">
+                    <img src="https://img.youtube.com/vi/cOUZHEI9sro/maxresdefault.jpg" alt="YouTube Video Thumbnail">
+                </a>
+                <p>Life moves pretty fast</p>
+            </div>
+
+            <div class="portfolio-item">
+                <a href="https://youtu.be/r8u6UTgXb2o?si=jRlXoTBvIFCcgiTJ" target="_blank">
+                    <img src="https://img.youtube.com/vi/r8u6UTgXb2o/maxresdefault.jpg" alt="YouTube Video Thumbnail">
+                </a>
+                <p>I learnt malayalam in a gujarati wedding</p>
+            </div>
+
+
+            
+
+          
+
+
+            <!-- More portfolio items can be added here -->
+
+        </div>
+    </div>
+
+
+ <!-- Portfolio Section -->
+ <div class="portfolio-section">
+
+
+    <h3>Short Films</h3>
+    <div class="portfolio-grid">
+
+       
+        <div class="portfolio-item">
+            <a href="https://youtu.be/PMgCi_lxUdg?si=NLolKxcfP3zqFr8a" target="_blank">
+                <img src="https://img.youtube.com/vi/PMgCi_lxUdg/maxresdefault.jpg" alt="YouTube Video Thumbnail">
+            </a>
+            <p>IFP 50Hr Short Film</p>
         </div>
 
+        <div class="portfolio-item">
+            <a href="https://youtu.be/v_Mun6H6kK0?si=MAdKCsCU8yWSd08w" target="_blank">
+                <img src="https://img.youtube.com/vi/v_Mun6H6kK0/maxresdefault.jpg" alt="YouTube Video Thumbnail">
+            </a>
+            <p>51Hr Short Film</p>
+            
+        </div>
+
+        
+
     </div>
-    </div>
+</div>
 
 
+<!-- Portfolio Section -->
+<div class="portfolio-section">
+
+
+    <h3>Client Work</h3>
+    <div class="portfolio-grid">
+
+       
+        <div class="portfolio-item">
+            <a href="https://youtu.be/PMgCi_lxUdg?si=NLolKxcfP3zqFr8a" target="_blank">
+                <img src="https://img.youtube.com/vi/PMgCi_lxUdg/maxresdefault.jpg" alt="YouTube Video Thumbnail">
+            </a>
+            <p>IFP 50Hr Short Film</p>
+        </div>
+
+        <div class="portfolio-item">
+            <a href="https://youtu.be/v_Mun6H6kK0?si=MAdKCsCU8yWSd08w" target="_blank">
+                <img src="https://img.youtube.com/vi/v_Mun6H6kK0/maxresdefault.jpg" alt="YouTube Video Thumbnail">
+            </a>
+            <p>51Hr Short Film</p>
+            
+        </div>
+
+
+        
+
+      
+
+
+       
+
+        <!-- More portfolio items can be added here -->
+
+    </div>
+</div>
+
+
+    <!-- Social Links -->
+    <div class="portfolio-social">
+        <a href="https://youtube.com/ritikvaishnav" target="_blank">YouTube</a>
+        <a href="https://instagram.com/ritikonboard" target="_blank">Instagram</a>
+        <a href="https://twitter.com/ritikonboard" target="_blank">Twitter</a>
     </div>
 
+    <!-- Footer -->
+    <footer>
+        &copy; 2024 Ritik Vaishnav. 
+    </footer>
 
 </body>
-
-<script src="https://cdn.jsdelivr.net/npm/flowbite@2.5.1/dist/flowbite.min.js">
-</script>
-
-
 </html>
