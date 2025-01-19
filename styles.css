@@ -275,17 +275,14 @@ p {
 }
 
 @keyframes fadeIn {
-  0% {
-    opacity: 0;
-    transform: translateY(20px);
-  }
+  
   100% {
     opacity: 1;
     transform: translateY(0);
   }
 }
 
-ul {
+ul {  
   list-style-type: none;
   font-size: clamp(0.8rem, 1vw, 1.2rem);
 }
