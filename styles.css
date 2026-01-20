@@ -133,11 +133,14 @@ body[theme="dark"] {
 }
 
 .intro-image img {
-  width: clamp(300px, 20vw, 300px);
-  height: clamp(300px, 20vw, 300px);
+  width: 100%;
+  max-width: 350px;
+  height: auto;
   object-fit: cover;
   border-radius: 0%;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  image-rendering: -webkit-optimize-contrast;
+  image-rendering: crisp-edges;
 }
 
 .quote-image {
