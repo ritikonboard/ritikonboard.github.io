@@ -661,3 +661,8 @@ p {
     padding: 1rem 0;
   }
 }
+
+.author-me {
+  font-weight: 600;
+  color: #222;
+}
