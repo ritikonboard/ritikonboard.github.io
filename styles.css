@@ -535,6 +535,20 @@ p {
   color: #555;
 }
 
+/* Venue and award highlighting */
+.highlight-venue {
+  color: #000000;
+  font-weight: 600;
+}
+
+.highlight-award {
+  color: #d97706;
+  font-weight: 600;
+  background-color: #fef3c7;
+  padding: 2px 6px;
+  border-radius: 3px;
+}
+
 /* Blog styles */
 .blog {
   padding: 2rem 0;
