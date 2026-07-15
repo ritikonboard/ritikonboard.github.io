@@ -304,6 +304,22 @@ document.addEventListener('DOMContentLoaded', () => {
   if (switcherStills) {
     switcherStills.addEventListener('click', () => setTab('stills'));
   }
+  // Setup click listeners for video player play trigger in details overlay
+  if (detailsPlayBtn) {
+    detailsPlayBtn.addEventListener('click', (e) => {
+      e.stopPropagation();
+      if (currentOverlayProject && currentOverlayProject.youtubeId) {
+        openVideoPlayer(currentOverlayProject.youtubeId);
+      }
+    });
+  }
+  if (detailsCover) {
+    detailsCover.addEventListener('click', () => {
+      if (currentOverlayProject && currentOverlayProject.youtubeId) {
+        openVideoPlayer(currentOverlayProject.youtubeId);
+      }
+    });
+  }
   // === 3. PROJECT DETAIL OVERLAY DRAWER ===
   function openProjectDetails(slug, updateHash = true) {
     const proj = movingProjects.find(p => p.slug === slug);
@@ -324,25 +340,6 @@ document.addEventListener('DOMContentLoaded', () => {
     if (proj.youtubeId) {
       detailsCover.classList.add('video-playable');
       detailsPlayBtn.style.display = 'flex';
-      
-      const playTrigger = (e) => {
-        e.stopPropagation();
-        openVideoPlayer(proj.youtubeId);
-      };
-      
-      // Clear old event listeners by cloning
-      const newPlayBtn = detailsPlayBtn.cloneNode(true);
-      detailsPlayBtn.parentNode.replaceChild(newPlayBtn, detailsPlayBtn);
-      newPlayBtn.addEventListener('click', playTrigger);
-      
-      const newCover = detailsCover.cloneNode(true);
-      detailsCover.parentNode.replaceChild(newCover, detailsCover);
-      // Re-assign references
-      detailsCover = newCover;
-      detailsCoverImg = detailsCover.querySelector('img');
-      detailsPlayBtn = detailsCover.querySelector('.cover-play-trigger-btn');
-      
-      detailsCover.addEventListener('click', playTrigger);
     } else {
       detailsCover.classList.remove('video-playable');
       detailsPlayBtn.style.display = 'none';
