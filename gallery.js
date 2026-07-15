@@ -370,13 +370,42 @@ document.addEventListener('DOMContentLoaded', () => {
     if (!movingContainer) return;
     movingContainer.innerHTML = '';
     
-    // Filter projects based on category selection
-    const filteredProjects = movingProjects.filter(proj => {
-      if (filterCategory === 'all') return true;
-      return proj.category === filterCategory;
-    });
+    // Remove commercial grid class by default
+    movingContainer.classList.remove('commercial-grid');
     
-    filteredProjects.forEach((proj) => {
+    if (filterCategory === 'personal') {
+      const personalProjects = movingProjects.filter(p => p.category === 'personal');
+      renderPersonalFilms(personalProjects);
+    } else if (filterCategory === 'commercial') {
+      movingContainer.classList.add('commercial-grid');
+      const commercialProjects = movingProjects.filter(p => p.category === 'commercial');
+      renderCommercialReels(commercialProjects);
+    } else {
+      // Render 'all' - personal stacked films first, then commercial reels in a grid!
+      const personalProjects = movingProjects.filter(p => p.category === 'personal');
+      const commercialProjects = movingProjects.filter(p => p.category === 'commercial');
+      
+      // Render personal films
+      renderPersonalFilms(personalProjects);
+      
+      // Add section divider and heading for client work
+      const sectionDivider = document.createElement('div');
+      sectionDivider.className = 'commercial-section-divider fade-up-animation';
+      sectionDivider.innerHTML = `
+        <h2 class="commercial-section-title">Commercial & Client Work</h2>
+      `;
+      movingContainer.appendChild(sectionDivider);
+      
+      // Render commercial reels inside a nested grid container
+      const nestedGrid = document.createElement('div');
+      nestedGrid.className = 'moving-list-container commercial-grid';
+      renderCommercialReels(commercialProjects, nestedGrid);
+      movingContainer.appendChild(nestedGrid);
+    }
+  }
+
+  function renderPersonalFilms(projects, container = movingContainer) {
+    projects.forEach((proj) => {
       const card = document.createElement('div');
       card.className = 'moving-card fade-up-animation';
       card.setAttribute('data-slug', proj.slug);
@@ -395,7 +424,25 @@ document.addEventListener('DOMContentLoaded', () => {
         openProjectDetails(proj.slug);
       });
       
-      movingContainer.appendChild(card);
+      container.appendChild(card);
+    });
+  }
+
+  function renderCommercialReels(projects, container = movingContainer) {
+    projects.forEach((proj) => {
+      const card = document.createElement('div');
+      card.className = 'commercial-video-card fade-up-animation';
+      card.innerHTML = `
+        <div class="video-player-wrapper">
+          <video src="${proj.videoPath}" controls preload="metadata" playsinline></video>
+        </div>
+        <div class="commercial-card-info">
+          <span class="commercial-metadata">${proj.type} • ${proj.year}</span>
+          <h3 class="commercial-title">${proj.title}</h3>
+          <p class="commercial-client">${proj.credits.Client || proj.credits.Influencer || ''}</p>
+        </div>
+      `;
+      container.appendChild(card);
     });
   }
   function renderStillsGrid() {
