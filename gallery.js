@@ -8,35 +8,32 @@ document.addEventListener('DOMContentLoaded', () => {
   const movingProjects = [
     {
       id: 1,
-      slug: "ifp-50hr-short-film-2024",
-      title: "IFP 50Hr Short Film 2024",
-      type: "SHORT FILM",
+      slug: "it-was-a-gift",
+      title: "it was a gift",
+      type: "PERSONAL PROJECT",
       year: "2024",
-      role: "Director & Editor",
-      youtubeId: "PMgCi_lxUdg",
-      coverImage: "https://img.youtube.com/vi/PMgCi_lxUdg/maxresdefault.jpg",
-      synopsis: "A dramatic visual narrative shot, edited, and scored within a strict 50-hour time constraint for the India Film Project national competition, exploring spontaneous connections in a fast-paced urban setting.",
+      role: "Filmmaker & Editor",
+      youtubeId: "I3etrYojo5I",
+      coverImage: "https://img.youtube.com/vi/I3etrYojo5I/maxresdefault.jpg",
+      synopsis: "A poetic visual reflection, capturing the essence of simple gifts and the silent dialogues we hold with memories.",
       credits: {
-        "Director": "Ritik Vaishnav",
-        "DoP": "Ritik Vaishnav",
-        "Editor": "Ritik Vaishnav",
-        "Cast": "Academic Crew"
+        "Filmmaker": "Ritik Vaishnav",
+        "Editor": "Ritik Vaishnav"
       },
       scenes: []
     },
     {
       id: 2,
-      slug: "51hr-short-film-2023",
-      title: "51Hr Short Film 2023",
-      type: "SHORT FILM",
-      year: "2023",
-      role: "Director & Editor",
-      youtubeId: "v_Mun6H6kK0",
-      coverImage: "https://img.youtube.com/vi/v_Mun6H6kK0/maxresdefault.jpg",
-      synopsis: "An intense visual short film conceived, shot, and finalized within 51 hours, capturing complex internal monologues in a dark, atmospheric palette.",
+      slug: "we-shot-a-podcast-on-a-chai-ki-thadi",
+      title: "we shot a podcast on a chai ki thadi",
+      type: "PERSONAL PROJECT",
+      year: "2024",
+      role: "Filmmaker & Editor",
+      youtubeId: "80dH7OdgBD0",
+      coverImage: "https://img.youtube.com/vi/80dH7OdgBD0/maxresdefault.jpg",
+      synopsis: "A raw, candid conversation recorded in the warm light of a local roadside tea stall, celebrating the beauty of simple talks and slow life.",
       credits: {
-        "Director": "Ritik Vaishnav",
-        "Cinematography": "Ritik Vaishnav",
+        "Filmmaker": "Ritik Vaishnav",
         "Editor": "Ritik Vaishnav"
       },
       scenes: []
@@ -60,8 +57,24 @@ document.addEventListener('DOMContentLoaded', () => {
     },
     {
       id: 4,
-      slug: "a-film-about-happiness",
-      title: "A Film About Happiness",
+      slug: "pointless-podcast-with-friend",
+      title: "I made the pointless podcast ever with my friend",
+      type: "PERSONAL PROJECT",
+      year: "2024",
+      role: "Filmmaker & Editor",
+      youtubeId: "G3WJduY2p3E",
+      coverImage: "https://img.youtube.com/vi/G3WJduY2p3E/maxresdefault.jpg",
+      synopsis: "A lighthearted, completely unstructured conversational recording between friends, capturing spontaneous humor and authentic connections.",
+      credits: {
+        "Filmmaker": "Ritik Vaishnav",
+        "Editor": "Ritik Vaishnav"
+      },
+      scenes: []
+    },
+    {
+      id: 5,
+      slug: "happiness-is-homemade",
+      title: "Happiness is Homemade",
       type: "PERSONAL PROJECT",
       year: "2024",
       role: "Filmmaker & Editor",
@@ -72,23 +85,6 @@ document.addEventListener('DOMContentLoaded', () => {
         "Filmmaker": "Ritik Vaishnav",
         "Editor": "Ritik Vaishnav",
         "Colorist": "Ritik Vaishnav"
-      },
-      scenes: []
-    },
-    {
-      id: 5,
-      slug: "60-days-of-summer",
-      title: "60 Days of Summer",
-      type: "PERSONAL PROJECT",
-      year: "2024",
-      role: "Filmmaker & Editor",
-      youtubeId: "W8uHIIf0K5I",
-      coverImage: "https://img.youtube.com/vi/W8uHIIf0K5I/maxresdefault.jpg",
-      synopsis: "A warm, nostalgic visual diary capturing summer days, slow travel, and the comforting stillness of vast natural landscapes.",
-      credits: {
-        "Filmmaker": "Ritik Vaishnav",
-        "Editor": "Ritik Vaishnav",
-        "Music Selection": "Ritik Vaishnav"
       },
       scenes: []
     },
@@ -111,6 +107,23 @@ document.addEventListener('DOMContentLoaded', () => {
     },
     {
       id: 7,
+      slug: "i-learnt-malayalam-in-a-gujarati-wedding",
+      title: "I Learnt Malayalam in a Gujarati Wedding",
+      type: "PERSONAL PROJECT",
+      year: "2023",
+      role: "Filmmaker & Editor",
+      youtubeId: "r8u6UTgXb2o",
+      coverImage: "https://img.youtube.com/vi/r8u6UTgXb2o/maxresdefault.jpg",
+      synopsis: "A lighthearted, cross-cultural vlog documentary capturing travel, languages, and festive wedding customs across different regional boundaries.",
+      credits: {
+        "Filmmaker": "Ritik Vaishnav",
+        "Editor": "Ritik Vaishnav",
+        "Host": "Ritik Vaishnav"
+      },
+      scenes: []
+    },
+    {
+      id: 8,
       slug: "life-moves-pretty-fast",
       title: "Life Moves Pretty Fast",
       type: "PERSONAL PROJECT",
@@ -126,19 +139,86 @@ document.addEventListener('DOMContentLoaded', () => {
       scenes: []
     },
     {
-      id: 8,
-      slug: "i-learnt-malayalam-in-a-gujarati-wedding",
-      title: "I Learnt Malayalam in a Gujarati Wedding",
+      id: 9,
+      slug: "60-days-of-summer",
+      title: "60 Days of Summer",
       type: "PERSONAL PROJECT",
-      year: "2023",
+      year: "2024",
       role: "Filmmaker & Editor",
-      youtubeId: "r8u6UTgXb2o",
-      coverImage: "https://img.youtube.com/vi/r8u6UTgXb2o/maxresdefault.jpg",
-      synopsis: "A lighthearted, cross-cultural vlog documentary capturing travel, languages, and festive wedding customs across different regional boundaries.",
+      youtubeId: "W8uHIIf0K5I",
+      coverImage: "https://img.youtube.com/vi/W8uHIIf0K5I/maxresdefault.jpg",
+      synopsis: "A warm, nostalgic visual diary capturing summer days, slow travel, and the comforting stillness of vast natural landscapes.",
       credits: {
         "Filmmaker": "Ritik Vaishnav",
         "Editor": "Ritik Vaishnav",
-        "Host": "Ritik Vaishnav"
+        "Music Selection": "Ritik Vaishnav"
+      },
+      scenes: []
+    },
+    {
+      id: 10,
+      slug: "postcards-from-jodhpur",
+      title: "Postcards from Jodhpur",
+      type: "PERSONAL PROJECT",
+      year: "2024",
+      role: "Filmmaker & Editor",
+      youtubeId: "LbI9s6L0kJc",
+      coverImage: "https://img.youtube.com/vi/LbI9s6L0kJc/maxresdefault.jpg",
+      synopsis: "A visual postcard and cinematic travel diary capturing the blue city of Jodhpur, its streets, architecture, and nostalgic essence.",
+      credits: {
+        "Filmmaker": "Ritik Vaishnav",
+        "Editor": "Ritik Vaishnav"
+      },
+      scenes: []
+    },
+    {
+      id: 11,
+      slug: "portrait-of-time",
+      title: "Portrait of Time",
+      type: "SHORT FILM",
+      year: "2024",
+      role: "Director & Editor",
+      youtubeId: "PMgCi_lxUdg",
+      coverImage: "https://img.youtube.com/vi/PMgCi_lxUdg/maxresdefault.jpg",
+      synopsis: "A poetic study of portraits frozen in time, capturing faces, spaces, and the silent, inevitable passage of time in everyday lives.",
+      credits: {
+        "Director": "Ritik Vaishnav",
+        "DoP": "Ritik Vaishnav",
+        "Editor": "Ritik Vaishnav"
+      },
+      scenes: []
+    },
+    {
+      id: 12,
+      slug: "shukragyzar",
+      title: "Shukragyzar",
+      type: "SHORT FILM",
+      year: "2023",
+      role: "Director & Editor",
+      youtubeId: "v_Mun6H6kK0",
+      coverImage: "https://img.youtube.com/vi/v_Mun6H6kK0/maxresdefault.jpg",
+      synopsis: "An intense visual short film conceived, shot, and finalized within a tight time limit, exploring gratitude and reflection in a dark, atmospheric palette.",
+      credits: {
+        "Director": "Ritik Vaishnav",
+        "Cinematography": "Ritik Vaishnav",
+        "Editor": "Ritik Vaishnav"
+      },
+      scenes: []
+    },
+    {
+      id: 13,
+      slug: "yaadon-ka-aranya-pixellens-farewell",
+      title: "यादों का अरण्य | पिक्स लेंस परिवार (Yaadon Ka Aranya)",
+      type: "PERSONAL PROJECT",
+      year: "2024",
+      role: "Filmmaker & Editor",
+      youtubeId: "5_ugCrUaM0s",
+      coverImage: "https://img.youtube.com/vi/5_ugCrUaM0s/maxresdefault.jpg",
+      synopsis: "A nostalgic and emotional farewell film created for the Pixellens MBM Jodhpur family, compiling years of memories, laughter, and behind-the-scenes moments.",
+      credits: {
+        "Filmmaker": "Ritik Vaishnav",
+        "Editor": "Ritik Vaishnav",
+        "Family": "Pixellens MBM"
       },
       scenes: []
     }
