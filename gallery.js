@@ -15,7 +15,7 @@ document.addEventListener('DOMContentLoaded', () => {
       role: "Filmmaker & Editor",
       youtubeId: "I3etrYojo5I",
       coverImage: "https://img.youtube.com/vi/I3etrYojo5I/maxresdefault.jpg",
-      synopsis: "A poetic visual reflection, capturing the essence of simple gifts and the silent dialogues we hold with memories.",
+      synopsis: "",
       credits: {
         "Filmmaker": "Ritik Vaishnav",
         "Editor": "Ritik Vaishnav"
@@ -31,7 +31,7 @@ document.addEventListener('DOMContentLoaded', () => {
       role: "Filmmaker & Editor",
       youtubeId: "80dH7OdgBD0",
       coverImage: "https://img.youtube.com/vi/80dH7OdgBD0/maxresdefault.jpg",
-      synopsis: "A raw, candid conversation recorded in the warm light of a local roadside tea stall, celebrating the beauty of simple talks and slow life.",
+      synopsis: "",
       credits: {
         "Filmmaker": "Ritik Vaishnav",
         "Editor": "Ritik Vaishnav"
@@ -47,7 +47,7 @@ document.addEventListener('DOMContentLoaded', () => {
       role: "Filmmaker & Writer",
       youtubeId: "sp6-W1MVi4I",
       coverImage: "https://img.youtube.com/vi/sp6-W1MVi4I/maxresdefault.jpg",
-      synopsis: "An introspective, poetic visual study exploring personal boundaries, dreams, and the silent dialogues we hold with time and space.",
+      synopsis: "",
       credits: {
         "Filmmaker": "Ritik Vaishnav",
         "Writer": "Ritik Vaishnav",
@@ -64,7 +64,7 @@ document.addEventListener('DOMContentLoaded', () => {
       role: "Filmmaker & Editor",
       youtubeId: "G3WJduY2p3E",
       coverImage: "https://img.youtube.com/vi/G3WJduY2p3E/maxresdefault.jpg",
-      synopsis: "A lighthearted, completely unstructured conversational recording between friends, capturing spontaneous humor and authentic connections.",
+      synopsis: "",
       credits: {
         "Filmmaker": "Ritik Vaishnav",
         "Editor": "Ritik Vaishnav"
@@ -80,7 +80,7 @@ document.addEventListener('DOMContentLoaded', () => {
       role: "Filmmaker & Editor",
       youtubeId: "dUrw0owD8dE",
       coverImage: "https://img.youtube.com/vi/dUrw0owD8dE/maxresdefault.jpg",
-      synopsis: "A quiet, documentary-style exploration of fleeting everyday moments that bring raw, uncalculated joy to our lives, celebrating simple beauty.",
+      synopsis: "",
       credits: {
         "Filmmaker": "Ritik Vaishnav",
         "Editor": "Ritik Vaishnav",
@@ -97,7 +97,7 @@ document.addEventListener('DOMContentLoaded', () => {
       role: "Filmmaker & Editor",
       youtubeId: "M8X9TDPrk6Y",
       coverImage: "https://img.youtube.com/vi/M8X9TDPrk6Y/maxresdefault.jpg",
-      synopsis: "A poetic film reflecting on memory, family archives, and the creative attempts we make to freeze time through camera frames.",
+      synopsis: "",
       credits: {
         "Filmmaker": "Ritik Vaishnav",
         "Editor": "Ritik Vaishnav",
@@ -114,7 +114,7 @@ document.addEventListener('DOMContentLoaded', () => {
       role: "Filmmaker & Editor",
       youtubeId: "r8u6UTgXb2o",
       coverImage: "https://img.youtube.com/vi/r8u6UTgXb2o/maxresdefault.jpg",
-      synopsis: "A lighthearted, cross-cultural vlog documentary capturing travel, languages, and festive wedding customs across different regional boundaries.",
+      synopsis: "",
       credits: {
         "Filmmaker": "Ritik Vaishnav",
         "Editor": "Ritik Vaishnav",
@@ -131,7 +131,7 @@ document.addEventListener('DOMContentLoaded', () => {
       role: "Filmmaker & Editor",
       youtubeId: "cOUZHEI9sro",
       coverImage: "https://img.youtube.com/vi/cOUZHEI9sro/maxresdefault.jpg",
-      synopsis: "A dynamic, high-spirited collage of travel memories, served as an aesthetic reminder to stop, look around, and enjoy the brief ride of life.",
+      synopsis: "",
       credits: {
         "Filmmaker": "Ritik Vaishnav",
         "Editor": "Ritik Vaishnav"
@@ -147,7 +147,7 @@ document.addEventListener('DOMContentLoaded', () => {
       role: "Filmmaker & Editor",
       youtubeId: "W8uHIIf0K5I",
       coverImage: "https://img.youtube.com/vi/W8uHIIf0K5I/maxresdefault.jpg",
-      synopsis: "A warm, nostalgic visual diary capturing summer days, slow travel, and the comforting stillness of vast natural landscapes.",
+      synopsis: "",
       credits: {
         "Filmmaker": "Ritik Vaishnav",
         "Editor": "Ritik Vaishnav",
@@ -164,7 +164,7 @@ document.addEventListener('DOMContentLoaded', () => {
       role: "Filmmaker & Editor",
       youtubeId: "LbI9s6L0kJc",
       coverImage: "https://img.youtube.com/vi/LbI9s6L0kJc/maxresdefault.jpg",
-      synopsis: "A visual postcard and cinematic travel diary capturing the blue city of Jodhpur, its streets, architecture, and nostalgic essence.",
+      synopsis: "",
       credits: {
         "Filmmaker": "Ritik Vaishnav",
         "Editor": "Ritik Vaishnav"
@@ -180,7 +180,7 @@ document.addEventListener('DOMContentLoaded', () => {
       role: "Director & Editor",
       youtubeId: "PMgCi_lxUdg",
       coverImage: "https://img.youtube.com/vi/PMgCi_lxUdg/maxresdefault.jpg",
-      synopsis: "A poetic study of portraits frozen in time, capturing faces, spaces, and the silent, inevitable passage of time in everyday lives.",
+      synopsis: "",
       credits: {
         "Director": "Ritik Vaishnav",
         "DoP": "Ritik Vaishnav",
@@ -197,7 +197,7 @@ document.addEventListener('DOMContentLoaded', () => {
       role: "Director & Editor",
       youtubeId: "v_Mun6H6kK0",
       coverImage: "https://img.youtube.com/vi/v_Mun6H6kK0/maxresdefault.jpg",
-      synopsis: "An intense visual short film conceived, shot, and finalized within a tight time limit, exploring gratitude and reflection in a dark, atmospheric palette.",
+      synopsis: "",
       credits: {
         "Director": "Ritik Vaishnav",
         "Cinematography": "Ritik Vaishnav",
@@ -214,7 +214,7 @@ document.addEventListener('DOMContentLoaded', () => {
       role: "Filmmaker & Editor",
       youtubeId: "5_ugCrUaM0s",
       coverImage: "https://img.youtube.com/vi/5_ugCrUaM0s/maxresdefault.jpg",
-      synopsis: "A nostalgic and emotional farewell film created for the Pixellens MBM Jodhpur family, compiling years of memories, laughter, and behind-the-scenes moments.",
+      synopsis: "",
       credits: {
         "Filmmaker": "Ritik Vaishnav",
         "Editor": "Ritik Vaishnav",
@@ -382,7 +382,25 @@ document.addEventListener('DOMContentLoaded', () => {
     // Set Title, Meta, and Synopsis
     detailsTitle.innerText = proj.title;
     detailsMeta.innerText = `${proj.type} • ${proj.year}`;
-    detailsSynopsis.innerText = proj.synopsis;
+    
+    const creditsTable = document.querySelector('.details-credits-table');
+    if (proj.synopsis) {
+      detailsSynopsis.innerText = proj.synopsis;
+      detailsSynopsis.style.display = 'block';
+      if (creditsTable) {
+        if (window.innerWidth >= 768) {
+          creditsTable.style.gridTemplateColumns = '2fr 1fr';
+        } else {
+          creditsTable.style.gridTemplateColumns = '1fr';
+        }
+      }
+    } else {
+      detailsSynopsis.innerText = '';
+      detailsSynopsis.style.display = 'none';
+      if (creditsTable) {
+        creditsTable.style.gridTemplateColumns = '1fr';
+      }
+    }
     
     // Set Cover Image
     detailsCoverImg.src = proj.coverImage;
