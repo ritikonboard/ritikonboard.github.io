@@ -22,12 +22,7 @@ document.addEventListener('DOMContentLoaded', () => {
         "Editor": "Ritik Vaishnav",
         "Cast": "Academic Crew"
       },
-      scenes: [
-        "https://images.unsplash.com/photo-1478760329108-5c3ed9d495a0?q=80&w=1200",
-        "https://images.unsplash.com/photo-1509198397868-475647b2a1e5?q=80&w=1200",
-        "https://images.unsplash.com/photo-1536440136628-849c177e76a1?q=80&w=1200",
-        "https://images.unsplash.com/photo-1489599849927-2ee91cede3ba?q=80&w=1200"
-      ]
+      scenes: []
     },
     {
       id: 2,
@@ -44,11 +39,7 @@ document.addEventListener('DOMContentLoaded', () => {
         "Cinematography": "Ritik Vaishnav",
         "Editor": "Ritik Vaishnav"
       },
-      scenes: [
-        "https://images.unsplash.com/photo-1518709268805-4e9042af9f23?q=80&w=1200",
-        "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?q=80&w=1200",
-        "https://images.unsplash.com/photo-1501854140801-50d01698950b?q=80&w=1200"
-      ]
+      scenes: []
     },
     {
       id: 3,
@@ -65,11 +56,7 @@ document.addEventListener('DOMContentLoaded', () => {
         "Writer": "Ritik Vaishnav",
         "Editor": "Ritik Vaishnav"
       },
-      scenes: [
-        "https://images.unsplash.com/photo-1447752875215-b2761acb3c5d?q=80&w=1200",
-        "https://images.unsplash.com/photo-1469474968028-56623f02e42e?q=80&w=1200",
-        "https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?q=80&w=1200"
-      ]
+      scenes: []
     },
     {
       id: 4,
@@ -86,10 +73,7 @@ document.addEventListener('DOMContentLoaded', () => {
         "Editor": "Ritik Vaishnav",
         "Colorist": "Ritik Vaishnav"
       },
-      scenes: [
-        "https://images.unsplash.com/photo-1513836279014-a89f7a76ae86?q=80&w=1200",
-        "https://images.unsplash.com/photo-1441974231531-c6227db76b6e?q=80&w=1200"
-      ]
+      scenes: []
     },
     {
       id: 5,
@@ -106,10 +90,7 @@ document.addEventListener('DOMContentLoaded', () => {
         "Editor": "Ritik Vaishnav",
         "Music Selection": "Ritik Vaishnav"
       },
-      scenes: [
-        "https://images.unsplash.com/photo-1433086966358-54859d0ed716?q=80&w=1200",
-        "https://images.unsplash.com/photo-1472214222541-d510753a4707?q=80&w=1200"
-      ]
+      scenes: []
     },
     {
       id: 6,
@@ -126,10 +107,7 @@ document.addEventListener('DOMContentLoaded', () => {
         "Editor": "Ritik Vaishnav",
         "Sound Design": "Ritik Vaishnav"
       },
-      scenes: [
-        "https://images.unsplash.com/photo-1465146633011-14f8e0781093?q=80&w=1200",
-        "https://images.unsplash.com/photo-1475924156734-496f6cac6ec1?q=80&w=1200"
-      ]
+      scenes: []
     },
     {
       id: 7,
@@ -145,10 +123,7 @@ document.addEventListener('DOMContentLoaded', () => {
         "Filmmaker": "Ritik Vaishnav",
         "Editor": "Ritik Vaishnav"
       },
-      scenes: [
-        "https://images.unsplash.com/photo-1426604966848-d7adac402bff?q=80&w=1200",
-        "https://images.unsplash.com/photo-1454496522488-7a8e488e8606?q=80&w=1200"
-      ]
+      scenes: []
     },
     {
       id: 8,
@@ -165,10 +140,7 @@ document.addEventListener('DOMContentLoaded', () => {
         "Editor": "Ritik Vaishnav",
         "Host": "Ritik Vaishnav"
       },
-      scenes: [
-        "https://images.unsplash.com/photo-1502082553048-f009c37129b9?q=80&w=1200",
-        "https://images.unsplash.com/photo-1448375240586-882707db888b?q=80&w=1200"
-      ]
+      scenes: []
     }
   ];
   const stillPhotos = [];
@@ -442,7 +414,7 @@ document.addEventListener('DOMContentLoaded', () => {
   // === 5. VIDEO IFRAME POPUP PLAYER ===
   function openVideoPlayer(youtubeId) {
     if (lightbox && lightboxIframe) {
-      lightboxIframe.src = `https://www.youtube-nocookie.com/embed/${youtubeId}?autoplay=1&rel=0&modestbranding=1`;
+      lightboxIframe.src = `https://www.youtube.com/embed/${youtubeId}?autoplay=1&rel=0&modestbranding=1`;
       lightbox.classList.add('open');
       document.body.style.overflow = 'hidden';
     }
