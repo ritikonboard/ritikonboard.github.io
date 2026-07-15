@@ -1,0 +1,537 @@
+/**
+ * Premium Creative Portfolio Controller
+ * For Ritik Vaishnav's gallery.html
+ * Handles Tabs, Overlays, Deep-Linking, and Lightboxes
+ */
+document.addEventListener('DOMContentLoaded', () => {
+  // === PROJECT DATA DEFINITIONS ===
+  const movingProjects = [
+    {
+      id: 1,
+      slug: "ifp-50hr-short-film-2024",
+      title: "IFP 50Hr Short Film 2024",
+      type: "SHORT FILM",
+      year: "2024",
+      role: "Director & Editor",
+      youtubeId: "PMgCi_lxUdg",
+      coverImage: "https://img.youtube.com/vi/PMgCi_lxUdg/maxresdefault.jpg",
+      synopsis: "A dramatic visual narrative shot, edited, and scored within a strict 50-hour time constraint for the India Film Project national competition, exploring spontaneous connections in a fast-paced urban setting.",
+      credits: {
+        "Director": "Ritik Vaishnav",
+        "DoP": "Ritik Vaishnav",
+        "Editor": "Ritik Vaishnav",
+        "Cast": "Academic Crew"
+      },
+      scenes: [
+        "https://images.unsplash.com/photo-1478760329108-5c3ed9d495a0?q=80&w=1200",
+        "https://images.unsplash.com/photo-1509198397868-475647b2a1e5?q=80&w=1200",
+        "https://images.unsplash.com/photo-1536440136628-849c177e76a1?q=80&w=1200",
+        "https://images.unsplash.com/photo-1489599849927-2ee91cede3ba?q=80&w=1200"
+      ]
+    },
+    {
+      id: 2,
+      slug: "51hr-short-film-2023",
+      title: "51Hr Short Film 2023",
+      type: "SHORT FILM",
+      year: "2023",
+      role: "Director & Editor",
+      youtubeId: "v_Mun6H6kK0",
+      coverImage: "https://img.youtube.com/vi/v_Mun6H6kK0/maxresdefault.jpg",
+      synopsis: "An intense visual short film conceived, shot, and finalized within 51 hours, capturing complex internal monologues in a dark, atmospheric palette.",
+      credits: {
+        "Director": "Ritik Vaishnav",
+        "Cinematography": "Ritik Vaishnav",
+        "Editor": "Ritik Vaishnav"
+      },
+      scenes: [
+        "https://images.unsplash.com/photo-1518709268805-4e9042af9f23?q=80&w=1200",
+        "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?q=80&w=1200",
+        "https://images.unsplash.com/photo-1501854140801-50d01698950b?q=80&w=1200"
+      ]
+    },
+    {
+      id: 3,
+      slug: "the-dream-wall",
+      title: "The Dream Wall",
+      type: "PERSONAL PROJECT",
+      year: "2024",
+      role: "Filmmaker & Writer",
+      youtubeId: "sp6-W1MVi4I",
+      coverImage: "https://img.youtube.com/vi/sp6-W1MVi4I/maxresdefault.jpg",
+      synopsis: "An introspective, poetic visual study exploring personal boundaries, dreams, and the silent dialogues we hold with time and space.",
+      credits: {
+        "Filmmaker": "Ritik Vaishnav",
+        "Writer": "Ritik Vaishnav",
+        "Editor": "Ritik Vaishnav"
+      },
+      scenes: [
+        "https://images.unsplash.com/photo-1447752875215-b2761acb3c5d?q=80&w=1200",
+        "https://images.unsplash.com/photo-1469474968028-56623f02e42e?q=80&w=1200",
+        "https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?q=80&w=1200"
+      ]
+    },
+    {
+      id: 4,
+      slug: "a-film-about-happiness",
+      title: "A Film About Happiness",
+      type: "PERSONAL PROJECT",
+      year: "2024",
+      role: "Filmmaker & Editor",
+      youtubeId: "dUrw0owD8dE",
+      coverImage: "https://img.youtube.com/vi/dUrw0owD8dE/maxresdefault.jpg",
+      synopsis: "A quiet, documentary-style exploration of fleeting everyday moments that bring raw, uncalculated joy to our lives, celebrating simple beauty.",
+      credits: {
+        "Filmmaker": "Ritik Vaishnav",
+        "Editor": "Ritik Vaishnav",
+        "Colorist": "Ritik Vaishnav"
+      },
+      scenes: [
+        "https://images.unsplash.com/photo-1513836279014-a89f7a76ae86?q=80&w=1200",
+        "https://images.unsplash.com/photo-1441974231531-c6227db76b6e?q=80&w=1200"
+      ]
+    },
+    {
+      id: 5,
+      slug: "60-days-of-summer",
+      title: "60 Days of Summer",
+      type: "PERSONAL PROJECT",
+      year: "2024",
+      role: "Filmmaker & Editor",
+      youtubeId: "W8uHIIf0K5I",
+      coverImage: "https://img.youtube.com/vi/W8uHIIf0K5I/maxresdefault.jpg",
+      synopsis: "A warm, nostalgic visual diary capturing summer days, slow travel, and the comforting stillness of vast natural landscapes.",
+      credits: {
+        "Filmmaker": "Ritik Vaishnav",
+        "Editor": "Ritik Vaishnav",
+        "Music Selection": "Ritik Vaishnav"
+      },
+      scenes: [
+        "https://images.unsplash.com/photo-1433086966358-54859d0ed716?q=80&w=1200",
+        "https://images.unsplash.com/photo-1472214222541-d510753a4707?q=80&w=1200"
+      ]
+    },
+    {
+      id: 6,
+      slug: "turning-the-pages-of-time",
+      title: "Turning the Pages of Time",
+      type: "PERSONAL PROJECT",
+      year: "2024",
+      role: "Filmmaker & Editor",
+      youtubeId: "M8X9TDPrk6Y",
+      coverImage: "https://img.youtube.com/vi/M8X9TDPrk6Y/maxresdefault.jpg",
+      synopsis: "A poetic film reflecting on memory, family archives, and the creative attempts we make to freeze time through camera frames.",
+      credits: {
+        "Filmmaker": "Ritik Vaishnav",
+        "Editor": "Ritik Vaishnav",
+        "Sound Design": "Ritik Vaishnav"
+      },
+      scenes: [
+        "https://images.unsplash.com/photo-1465146633011-14f8e0781093?q=80&w=1200",
+        "https://images.unsplash.com/photo-1475924156734-496f6cac6ec1?q=80&w=1200"
+      ]
+    },
+    {
+      id: 7,
+      slug: "life-moves-pretty-fast",
+      title: "Life Moves Pretty Fast",
+      type: "PERSONAL PROJECT",
+      year: "2023",
+      role: "Filmmaker & Editor",
+      youtubeId: "cOUZHEI9sro",
+      coverImage: "https://img.youtube.com/vi/cOUZHEI9sro/maxresdefault.jpg",
+      synopsis: "A dynamic, high-spirited collage of travel memories, served as an aesthetic reminder to stop, look around, and enjoy the brief ride of life.",
+      credits: {
+        "Filmmaker": "Ritik Vaishnav",
+        "Editor": "Ritik Vaishnav"
+      },
+      scenes: [
+        "https://images.unsplash.com/photo-1426604966848-d7adac402bff?q=80&w=1200",
+        "https://images.unsplash.com/photo-1454496522488-7a8e488e8606?q=80&w=1200"
+      ]
+    },
+    {
+      id: 8,
+      slug: "i-learnt-malayalam-in-a-gujarati-wedding",
+      title: "I Learnt Malayalam in a Gujarati Wedding",
+      type: "PERSONAL PROJECT",
+      year: "2023",
+      role: "Filmmaker & Editor",
+      youtubeId: "r8u6UTgXb2o",
+      coverImage: "https://img.youtube.com/vi/r8u6UTgXb2o/maxresdefault.jpg",
+      synopsis: "A lighthearted, cross-cultural vlog documentary capturing travel, languages, and festive wedding customs across different regional boundaries.",
+      credits: {
+        "Filmmaker": "Ritik Vaishnav",
+        "Editor": "Ritik Vaishnav",
+        "Host": "Ritik Vaishnav"
+      },
+      scenes: [
+        "https://images.unsplash.com/photo-1502082553048-f009c37129b9?q=80&w=1200",
+        "https://images.unsplash.com/photo-1448375240586-882707db888b?q=80&w=1200"
+      ]
+    }
+  ];
+  const stillPhotos = [];
+  // Add active page tag to body
+  document.body.classList.add('creative-gallery-active');
+  // === DOM ELEMENTS ===
+  const switcherMoving = document.getElementById('switch-moving');
+  const switcherStills = document.getElementById('switch-stills');
+  const movingPanel = document.getElementById('moving-panel');
+  const stillsPanel = document.getElementById('stills-panel');
+  const movingContainer = document.getElementById('moving-container');
+  const stillsContainer = document.getElementById('stills-container');
+  // Details Overlay drawer elements
+  const detailsOverlay = document.getElementById('details-overlay');
+  const detailsCloseBtn = document.getElementById('details-close-btn');
+  const detailsCover = document.getElementById('details-cover');
+  const detailsCoverImg = document.getElementById('details-cover-img');
+  const detailsPlayBtn = document.getElementById('details-play-btn');
+  const detailsMeta = document.getElementById('details-meta');
+  const detailsTitle = document.getElementById('details-title');
+  const detailsSynopsis = document.getElementById('details-synopsis');
+  const detailsCreditsList = document.getElementById('details-credits-list');
+  const detailsScenesGallery = document.getElementById('details-scenes-gallery');
+  const detailsPrevLink = document.getElementById('details-prev-link');
+  const detailsNextLink = document.getElementById('details-next-link');
+  // Video player lightbox modal elements (specifically for playing videos)
+  const lightbox = document.getElementById('lightbox');
+  const lightboxIframe = document.getElementById('lightbox-iframe');
+  const lightboxClose = document.getElementById('lightbox-close');
+  // Stills Lightbox modal elements (specifically for photos)
+  const stillsLightbox = document.getElementById('stills-lightbox');
+  const stillsLightboxImg = document.getElementById('stills-lightbox-img');
+  const stillsLightboxClose = document.getElementById('stills-lightbox-close');
+  const stillsLightboxPrev = document.getElementById('stills-lightbox-prev');
+  const stillsLightboxNext = document.getElementById('stills-lightbox-next');
+  const stillsLightboxIndex = document.getElementById('stills-lightbox-index');
+  // === STATE VARIABLES ===
+  let currentActiveTab = 'moving'; // 'moving' or 'stills'
+  let currentOverlayProject = null;
+  let currentLightboxPhotoIndex = 0;
+  // === 1. POPULATE INITIAL VIEWS ---
+  function renderMovingList() {
+    if (!movingContainer) return;
+    movingContainer.innerHTML = '';
+    
+    movingProjects.forEach((proj) => {
+      const card = document.createElement('div');
+      card.className = 'moving-card fade-up-animation';
+      card.setAttribute('data-slug', proj.slug);
+      card.innerHTML = `
+        <div class="card-img-wrapper">
+          <img src="${proj.coverImage}" alt="${proj.title}" loading="lazy">
+        </div>
+        <div class="card-vignette-overlay"></div>
+        <div class="card-info-content">
+          <span class="card-metadata">${proj.type} • ${proj.year}</span>
+          <h2 class="card-title">${proj.title}</h2>
+        </div>
+      `;
+      
+      card.addEventListener('click', () => {
+        openProjectDetails(proj.slug);
+      });
+      
+      movingContainer.appendChild(card);
+    });
+  }
+  function renderStillsGrid() {
+    if (!stillsContainer) return;
+    stillsContainer.innerHTML = '';
+    
+    stillPhotos.forEach((imgSrc, index) => {
+      const card = document.createElement('div');
+      card.className = 'still-card fade-up-animation';
+      card.innerHTML = `
+        <img src="${imgSrc}" alt="Cinematic Nature Photograph ${index + 1}" loading="lazy">
+        <div class="still-hover-overlay">
+          <div class="still-view-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:20px;height:20px;">
+              <circle cx="11" cy="11" r="8"></circle>
+              <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+              <line x1="11" y1="8" x2="11" y2="14"></line>
+              <line x1="8" y1="11" x2="14" y2="11"></line>
+            </svg>
+          </div>
+        </div>
+      `;
+      
+      card.addEventListener('click', () => {
+        openStillsLightbox(index);
+      });
+      
+      stillsContainer.appendChild(card);
+    });
+  }
+  renderMovingList();
+  renderStillsGrid();
+  // === 2. TAB SWITCHER FUNCTIONALITY ===
+  function setTab(tabName) {
+    if (tabName === currentActiveTab) return;
+    
+    currentActiveTab = tabName;
+    
+    if (tabName === 'moving') {
+      switcherMoving.classList.add('active');
+      switcherStills.classList.remove('active');
+      
+      stillsPanel.classList.remove('active-panel');
+      setTimeout(() => {
+        stillsPanel.style.display = 'none';
+        movingPanel.style.display = 'block';
+        setTimeout(() => {
+          movingPanel.classList.add('active-panel');
+        }, 50);
+      }, 300);
+    } else {
+      switcherStills.classList.add('active');
+      switcherMoving.classList.remove('active');
+      
+      movingPanel.classList.remove('active-panel');
+      setTimeout(() => {
+        movingPanel.style.display = 'none';
+        stillsPanel.style.display = 'block';
+        setTimeout(() => {
+          stillsPanel.classList.add('active-panel');
+        }, 50);
+      }, 300);
+    }
+  }
+  if (switcherMoving) {
+    switcherMoving.addEventListener('click', () => setTab('moving'));
+  }
+  if (switcherStills) {
+    switcherStills.addEventListener('click', () => setTab('stills'));
+  }
+  // === 3. PROJECT DETAIL OVERLAY DRAWER ===
+  function openProjectDetails(slug, updateHash = true) {
+    const proj = movingProjects.find(p => p.slug === slug);
+    if (!proj) return;
+    
+    currentOverlayProject = proj;
+    
+    // Set Title, Meta, and Synopsis
+    detailsTitle.innerText = proj.title;
+    detailsMeta.innerText = `${proj.type} • ${proj.year}`;
+    detailsSynopsis.innerText = proj.synopsis;
+    
+    // Set Cover Image
+    detailsCoverImg.src = proj.coverImage;
+    detailsCoverImg.alt = `${proj.title} Cover`;
+    
+    // Setup Play video click trigger on cover or button
+    if (proj.youtubeId) {
+      detailsCover.classList.add('video-playable');
+      detailsPlayBtn.style.display = 'flex';
+      
+      const playTrigger = (e) => {
+        e.stopPropagation();
+        openVideoPlayer(proj.youtubeId);
+      };
+      
+      // Clear old event listeners by cloning
+      const newPlayBtn = detailsPlayBtn.cloneNode(true);
+      detailsPlayBtn.parentNode.replaceChild(newPlayBtn, detailsPlayBtn);
+      newPlayBtn.addEventListener('click', playTrigger);
+      
+      const newCover = detailsCover.cloneNode(true);
+      detailsCover.parentNode.replaceChild(newCover, detailsCover);
+      // Re-assign references
+      detailsCover = newCover;
+      detailsCoverImg = detailsCover.querySelector('img');
+      detailsPlayBtn = detailsCover.querySelector('.cover-play-trigger-btn');
+      
+      detailsCover.addEventListener('click', playTrigger);
+    } else {
+      detailsCover.classList.remove('video-playable');
+      detailsPlayBtn.style.display = 'none';
+    }
+    
+    // Set Credits
+    detailsCreditsList.innerHTML = '';
+    const entries = Object.entries(proj.credits);
+    entries.forEach(([role, val]) => {
+      const row = document.createElement('div');
+      row.className = 'credit-row';
+      row.innerHTML = `
+        <span class="credit-label">${role}</span>
+        <span class="credit-value">${val}</span>
+      `;
+      detailsCreditsList.appendChild(row);
+    });
+    
+    // Set Scenes
+    detailsScenesGallery.innerHTML = '';
+    // Group scenes in pairs or single wide screens
+    for (let i = 0; i < proj.scenes.length; i += 2) {
+      const row = document.createElement('div');
+      
+      if (i + 1 < proj.scenes.length) {
+        // Double column row
+        row.className = 'scene-row double-col';
+        row.innerHTML = `
+          <div class="scene-wrapper">
+            <img src="${proj.scenes[i]}" alt="Film scene from ${proj.title}" loading="lazy">
+          </div>
+          <div class="scene-wrapper">
+            <img src="${proj.scenes[i + 1]}" alt="Film scene from ${proj.title}" loading="lazy">
+          </div>
+        `;
+      } else {
+        // Single column wide row
+        row.className = 'scene-row';
+        row.innerHTML = `
+          <div class="scene-wrapper">
+            <img src="${proj.scenes[i]}" alt="Film scene from ${proj.title}" loading="lazy">
+          </div>
+        `;
+      }
+      detailsScenesGallery.appendChild(row);
+    }
+    
+    // Setup Navigation link clicks
+    const currentIndex = movingProjects.findIndex(p => p.slug === slug);
+    const prevProj = movingProjects[(currentIndex - 1 + movingProjects.length) % movingProjects.length];
+    const nextProj = movingProjects[(currentIndex + 1) % movingProjects.length];
+    
+    detailsPrevLink.innerText = `Previous: ${prevProj.title}`;
+    detailsPrevLink.onclick = () => openProjectDetails(prevProj.slug);
+    
+    detailsNextLink.innerText = `Next: ${nextProj.title}`;
+    detailsNextLink.onclick = () => openProjectDetails(nextProj.slug);
+    
+    // Open the drawer
+    detailsOverlay.classList.add('open-overlay');
+    document.body.style.overflow = 'hidden';
+    
+    // Update hash router
+    if (updateHash) {
+      window.location.hash = `#project-${slug}`;
+    }
+    
+    // Scroll details container to top
+    detailsOverlay.scrollTop = 0;
+  }
+  function closeProjectDetails() {
+    detailsOverlay.classList.remove('open-overlay');
+    document.body.style.overflow = '';
+    currentOverlayProject = null;
+    
+    // Reset URL Hash
+    if (window.location.hash.startsWith('#project-')) {
+      history.pushState("", document.title, window.location.pathname + window.location.search);
+    }
+  }
+  if (detailsCloseBtn) {
+    detailsCloseBtn.addEventListener('click', closeProjectDetails);
+  }
+  // === 4. HASH DEEP LINKING ROUTER ===
+  function handleHashRoute() {
+    const hash = window.location.hash;
+    if (hash.startsWith('#project-')) {
+      const slug = hash.replace('#project-', '');
+      openProjectDetails(slug, false);
+      setTab('moving');
+    } else {
+      closeProjectDetails();
+    }
+  }
+  window.addEventListener('hashchange', handleHashRoute);
+  // Trigger on initial page load
+  if (window.location.hash) {
+    setTimeout(handleHashRoute, 200);
+  }
+  // === 5. VIDEO IFRAME POPUP PLAYER ===
+  function openVideoPlayer(youtubeId) {
+    if (lightbox && lightboxIframe) {
+      lightboxIframe.src = `https://www.youtube-nocookie.com/embed/${youtubeId}?autoplay=1&rel=0&modestbranding=1`;
+      lightbox.classList.add('open');
+      document.body.style.overflow = 'hidden';
+    }
+  }
+  function closeVideoPlayer() {
+    if (lightbox && lightboxIframe) {
+      lightbox.classList.remove('open');
+      lightboxIframe.src = '';
+      
+      // If we closed the video and details overlay is open, keep body scrolling disabled
+      if (currentOverlayProject) {
+        document.body.style.overflow = 'hidden';
+      } else {
+        document.body.style.overflow = '';
+      }
+    }
+  }
+  if (lightboxClose) {
+    lightboxClose.addEventListener('click', closeVideoPlayer);
+  }
+  if (lightbox) {
+    lightbox.addEventListener('click', (e) => {
+      if (e.target === lightbox) closeVideoPlayer();
+    });
+  }
+  // === 6. STILLS LIGHTBOX MODAL ===
+  function openStillsLightbox(index) {
+    currentLightboxPhotoIndex = index;
+    updateStillsLightboxImage();
+    stillsLightbox.classList.add('open-lightbox');
+    document.body.style.overflow = 'hidden';
+  }
+  function updateStillsLightboxImage() {
+    const imgSrc = stillPhotos[currentLightboxPhotoIndex];
+    stillsLightboxImg.src = imgSrc;
+    stillsLightboxImg.alt = `Still photograph ${currentLightboxPhotoIndex + 1}`;
+    stillsLightboxIndex.innerText = `${currentLightboxPhotoIndex + 1} / ${stillPhotos.length}`;
+  }
+  function closeStillsLightbox() {
+    stillsLightbox.classList.remove('open-lightbox');
+    document.body.style.overflow = '';
+  }
+  function navigateStillsLightbox(direction) {
+    if (direction === 'prev') {
+      currentLightboxPhotoIndex = (currentLightboxPhotoIndex - 1 + stillPhotos.length) % stillPhotos.length;
+    } else {
+      currentLightboxPhotoIndex = (currentLightboxPhotoIndex + 1) % stillPhotos.length;
+    }
+    updateStillsLightboxImage();
+  }
+  if (stillsLightboxClose) {
+    stillsLightboxClose.addEventListener('click', closeStillsLightbox);
+  }
+  if (stillsLightboxPrev) {
+    stillsLightboxPrev.addEventListener('click', () => navigateStillsLightbox('prev'));
+  }
+  if (stillsLightboxNext) {
+    stillsLightboxNext.addEventListener('click', () => navigateStillsLightbox('next'));
+  }
+  if (stillsLightbox) {
+    stillsLightbox.addEventListener('click', (e) => {
+      if (e.target === stillsLightbox || e.target.classList.contains('lightbox-img-wrapper')) {
+        closeStillsLightbox();
+      }
+    });
+  }
+  // === 7. KEYBOARD SUPPORT ===
+  document.addEventListener('keydown', (e) => {
+    // Escape key
+    if (e.key === 'Escape') {
+      if (lightbox && lightbox.classList.contains('open')) {
+        closeVideoPlayer();
+      } else if (stillsLightbox && stillsLightbox.classList.contains('open-lightbox')) {
+        closeStillsLightbox();
+      } else if (currentOverlayProject) {
+        closeProjectDetails();
+      }
+    }
+    
+    // Left/Right arrows for stills gallery
+    if (stillsLightbox && stillsLightbox.classList.contains('open-lightbox')) {
+      if (e.key === 'ArrowLeft') {
+        navigateStillsLightbox('prev');
+      } else if (e.key === 'ArrowRight') {
+        navigateStillsLightbox('next');
+      }
+    }
+  });
+});
