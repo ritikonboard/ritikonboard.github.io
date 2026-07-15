@@ -41,7 +41,7 @@ document.addEventListener('DOMContentLoaded', () => {
     {
       id: 3,
       slug: "the-dream-wall",
-      title: "The Dream Wall",
+      title: "I built a dream wall to make them come true",
       type: "PERSONAL PROJECT",
       year: "2024",
       role: "Filmmaker & Writer",
@@ -91,7 +91,7 @@ document.addEventListener('DOMContentLoaded', () => {
     {
       id: 6,
       slug: "turning-the-pages-of-time",
-      title: "Turning the Pages of Time",
+      title: "turning the pages back",
       type: "PERSONAL PROJECT",
       year: "2024",
       role: "Filmmaker & Editor",
@@ -108,7 +108,7 @@ document.addEventListener('DOMContentLoaded', () => {
     {
       id: 7,
       slug: "i-learnt-malayalam-in-a-gujarati-wedding",
-      title: "I Learnt Malayalam in a Gujarati Wedding",
+      title: "I learnt malayalam in a gujarati wedding",
       type: "PERSONAL PROJECT",
       year: "2023",
       role: "Filmmaker & Editor",
@@ -125,7 +125,7 @@ document.addEventListener('DOMContentLoaded', () => {
     {
       id: 8,
       slug: "life-moves-pretty-fast",
-      title: "Life Moves Pretty Fast",
+      title: "life moves pretty fast",
       type: "PERSONAL PROJECT",
       year: "2023",
       role: "Filmmaker & Editor",
@@ -141,7 +141,7 @@ document.addEventListener('DOMContentLoaded', () => {
     {
       id: 9,
       slug: "60-days-of-summer",
-      title: "60 Days of Summer",
+      title: "what a guy can do in 60 days of summer",
       type: "PERSONAL PROJECT",
       year: "2024",
       role: "Filmmaker & Editor",
@@ -158,7 +158,7 @@ document.addEventListener('DOMContentLoaded', () => {
     {
       id: 10,
       slug: "postcards-from-jodhpur",
-      title: "Postcards from Jodhpur",
+      title: "postcards from jodhpur",
       type: "PERSONAL PROJECT",
       year: "2024",
       role: "Filmmaker & Editor",
@@ -174,7 +174,7 @@ document.addEventListener('DOMContentLoaded', () => {
     {
       id: 11,
       slug: "portrait-of-time",
-      title: "Portrait of Time",
+      title: "Portrait of a Time | Short Film | 50Hr IFP Filmmaking Challenge 2024 | Pixellens",
       type: "SHORT FILM",
       year: "2024",
       role: "Director & Editor",
@@ -191,7 +191,7 @@ document.addEventListener('DOMContentLoaded', () => {
     {
       id: 12,
       slug: "shukragyzar",
-      title: "Shukragyzar",
+      title: "Shukraguzar | Short Film | 51 Hr Filmmaking",
       type: "SHORT FILM",
       year: "2023",
       role: "Director & Editor",
@@ -208,7 +208,7 @@ document.addEventListener('DOMContentLoaded', () => {
     {
       id: 13,
       slug: "yaadon-ka-aranya-pixellens-farewell",
-      title: "यादों का अरण्य | पिक्स लेंस परिवार (Yaadon Ka Aranya)",
+      title: "यादों का अरण्य | पिक्स लेंस परिवार",
       type: "PERSONAL PROJECT",
       year: "2024",
       role: "Filmmaker & Editor",
