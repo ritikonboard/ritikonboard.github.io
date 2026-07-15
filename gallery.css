@@ -26,6 +26,21 @@ body.creative-gallery-active {
   overflow-x: hidden;
   -webkit-font-smoothing: antialiased;
 }
+/* Disable tap selection overlay highlight and text-copy selection on buttons/links for mobile */
+button, 
+.switcher-btn, 
+.sub-filter-btn {
+  -webkit-tap-highlight-color: transparent;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+a,
+.moving-card,
+.still-card {
+  -webkit-tap-highlight-color: transparent;
+}
 /* Align links in dark theme */
 body.creative-gallery-active a {
   text-decoration: none;
