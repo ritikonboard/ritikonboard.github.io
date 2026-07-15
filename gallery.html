@@ -43,7 +43,7 @@
                     <div class="showreel-video-wrapper">
                         <!-- Native HTML5 looping autoplay video -->
                         <video autoplay muted loop playsinline id="showreel-bg-video">
-                            <source src="assets/pushkar_intro.mp4" type="video/mp4">
+                            <source src="assets/pushkar intro 1.mp4" type="video/mp4">
                             Your browser does not support the video tag.
                         </video>
                     </div>
@@ -69,6 +69,11 @@
             
             <!-- Tab A: Moving Panels List -->
             <div id="moving-panel" class="portfolio-view-panel active-panel">
+                <div class="sub-filter-bar">
+                    <button class="sub-filter-btn active" data-filter="all">All</button>
+                    <button class="sub-filter-btn" data-filter="personal">Films & Personal</button>
+                    <button class="sub-filter-btn" data-filter="commercial">Commercial & Client Work</button>
+                </div>
                 <div id="moving-container" class="moving-list-container">
                     <!-- Loaded dynamically via gallery.js -->
                 </div>
@@ -191,6 +196,7 @@
                 </svg>
             </button>
             <iframe id="lightbox-iframe" src="" allow="autoplay; encrypted-media; gyroscope; picture-in-picture" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            <video id="lightbox-video" controls autoplay playsinline style="display: none; width: 100%; height: 100%; border-radius: 12px; outline: none; background: #000; max-height: 80vh;"></video>
         </div>
     </div>
     <!-- CINEMATIC PHOTO LIGHTBOX MODAL -->

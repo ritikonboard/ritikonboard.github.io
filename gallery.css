@@ -887,3 +887,35 @@ body.creative-gallery-active .header {
     transform: translateY(0);
   }
 }
+/* Sub-Filter Bar styles */
+.sub-filter-bar {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 10px;
+  margin-bottom: 40px;
+}
+.sub-filter-btn {
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  color: var(--text-muted);
+  font-family: var(--font-inter);
+  font-size: 13px;
+  font-weight: 400;
+  padding: 8px 18px;
+  border-radius: 20px;
+  cursor: pointer;
+  letter-spacing: 0.5px;
+  transition: all 0.3s cubic-bezier(0.25, 1, 0.5, 1);
+}
+.sub-filter-btn:hover {
+  color: var(--text-white);
+  border-color: rgba(255, 255, 255, 0.2);
+  background-color: rgba(255, 255, 255, 0.02);
+}
+.sub-filter-btn.active {
+  background-color: rgba(255, 255, 255, 0.08);
+  color: var(--text-white);
+  border-color: rgba(255, 255, 255, 0.25);
+  font-weight: 500;
+}

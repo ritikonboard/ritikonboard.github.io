@@ -20,6 +20,7 @@ document.addEventListener('DOMContentLoaded', () => {
         "Filmmaker": "Ritik Vaishnav",
         "Editor": "Ritik Vaishnav"
       },
+      category: "personal",
       scenes: []
     },
     {
@@ -36,6 +37,7 @@ document.addEventListener('DOMContentLoaded', () => {
         "Filmmaker": "Ritik Vaishnav",
         "Editor": "Ritik Vaishnav"
       },
+      category: "personal",
       scenes: []
     },
     {
@@ -53,6 +55,7 @@ document.addEventListener('DOMContentLoaded', () => {
         "Writer": "Ritik Vaishnav",
         "Editor": "Ritik Vaishnav"
       },
+      category: "personal",
       scenes: []
     },
     {
@@ -69,6 +72,7 @@ document.addEventListener('DOMContentLoaded', () => {
         "Filmmaker": "Ritik Vaishnav",
         "Editor": "Ritik Vaishnav"
       },
+      category: "personal",
       scenes: []
     },
     {
@@ -86,6 +90,7 @@ document.addEventListener('DOMContentLoaded', () => {
         "Editor": "Ritik Vaishnav",
         "Colorist": "Ritik Vaishnav"
       },
+      category: "personal",
       scenes: []
     },
     {
@@ -103,6 +108,7 @@ document.addEventListener('DOMContentLoaded', () => {
         "Editor": "Ritik Vaishnav",
         "Sound Design": "Ritik Vaishnav"
       },
+      category: "personal",
       scenes: []
     },
     {
@@ -120,6 +126,7 @@ document.addEventListener('DOMContentLoaded', () => {
         "Editor": "Ritik Vaishnav",
         "Host": "Ritik Vaishnav"
       },
+      category: "personal",
       scenes: []
     },
     {
@@ -136,6 +143,7 @@ document.addEventListener('DOMContentLoaded', () => {
         "Filmmaker": "Ritik Vaishnav",
         "Editor": "Ritik Vaishnav"
       },
+      category: "personal",
       scenes: []
     },
     {
@@ -153,6 +161,7 @@ document.addEventListener('DOMContentLoaded', () => {
         "Editor": "Ritik Vaishnav",
         "Music Selection": "Ritik Vaishnav"
       },
+      category: "personal",
       scenes: []
     },
     {
@@ -169,6 +178,7 @@ document.addEventListener('DOMContentLoaded', () => {
         "Filmmaker": "Ritik Vaishnav",
         "Editor": "Ritik Vaishnav"
       },
+      category: "personal",
       scenes: []
     },
     {
@@ -186,6 +196,7 @@ document.addEventListener('DOMContentLoaded', () => {
         "DoP": "Ritik Vaishnav",
         "Editor": "Ritik Vaishnav"
       },
+      category: "personal",
       scenes: []
     },
     {
@@ -203,6 +214,7 @@ document.addEventListener('DOMContentLoaded', () => {
         "Cinematography": "Ritik Vaishnav",
         "Editor": "Ritik Vaishnav"
       },
+      category: "personal",
       scenes: []
     },
     {
@@ -220,6 +232,97 @@ document.addEventListener('DOMContentLoaded', () => {
         "Editor": "Ritik Vaishnav",
         "Family": "Pixellens MBM"
       },
+      category: "personal",
+      scenes: []
+    },
+    {
+      id: 14,
+      slug: "park-plaza-cut-the-noise",
+      title: "Park Plaza - Cut the Noise",
+      type: "COMMERCIAL AD",
+      year: "2024",
+      role: "Director & Editor",
+      videoPath: "assets/ADs (tried to be creative)/Park Plaza Ads/cut the noise.mp4",
+      coverImage: "https://images.unsplash.com/photo-1566073771259-6a8506099945?q=80&w=600",
+      synopsis: "",
+      credits: {
+        "Client": "Park Plaza Hotels",
+        "Director": "Ritik Vaishnav",
+        "Editor": "Ritik Vaishnav"
+      },
+      category: "commercial",
+      scenes: []
+    },
+    {
+      id: 15,
+      slug: "park-plaza-diwali-ad",
+      title: "Park Plaza - Diwali Special",
+      type: "COMMERCIAL AD",
+      year: "2024",
+      role: "Director & Editor",
+      videoPath: "assets/ADs (tried to be creative)/Park Plaza Ads/Diwali_ad.mp4",
+      coverImage: "https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?q=80&w=600",
+      synopsis: "",
+      credits: {
+        "Client": "Park Plaza Hotels",
+        "Director": "Ritik Vaishnav",
+        "Editor": "Ritik Vaishnav"
+      },
+      category: "commercial",
+      scenes: []
+    },
+    {
+      id: 16,
+      slug: "influencer-outdoors-cinematic",
+      title: "Outdoors Cinematic - Fashion Film",
+      type: "FASHION FILM",
+      year: "2024",
+      role: "Filmmaker & Editor",
+      videoPath: "assets/ADs (tried to be creative)/Influencer Creative/Outdoors.mp4",
+      coverImage: "https://images.unsplash.com/photo-1483985988355-763728e1935b?q=80&w=600",
+      synopsis: "",
+      credits: {
+        "Influencer": "Creative Collaboration",
+        "Filmmaker": "Ritik Vaishnav",
+        "Editor": "Ritik Vaishnav"
+      },
+      category: "commercial",
+      scenes: []
+    },
+    {
+      id: 17,
+      slug: "kalorie-count-reel-4",
+      title: "Kalorie Count Cafe - Aesthetic Reel",
+      type: "COMMERCIAL REEL",
+      year: "2024",
+      role: "Filmmaker & Editor",
+      videoPath: "assets/ADs (tried to be creative)/Kalorie Count (Cafe)/KC Reel 4 Final.mp4",
+      coverImage: "https://images.unsplash.com/photo-1498804103079-a6351b050096?q=80&w=600",
+      synopsis: "",
+      credits: {
+        "Client": "Kalorie Count Cafe",
+        "Filmmaker": "Ritik Vaishnav",
+        "Editor": "Ritik Vaishnav"
+      },
+      category: "commercial",
+      scenes: []
+    },
+    {
+      id: 18,
+      slug: "kalorie-count-reel-7",
+      title: "Kalorie Count Cafe - Signature Reel",
+      type: "COMMERCIAL REEL",
+      year: "2024",
+      role: "Filmmaker & Editor",
+      videoPath: "assets/ADs (tried to be creative)/Kalorie Count (Cafe)/KC Reel 7.mp4",
+      coverImage: "https://images.unsplash.com/photo-1554118811-1e0d58224f24?q=80&w=600",
+      synopsis: "",
+      credits: {
+        "Client": "Kalorie Count Cafe",
+        "Filmmaker": "Ritik Vaishnav",
+        "Editor": "Ritik Vaishnav"
+      },
+      category: "commercial",
       scenes: []
     }
   ];
@@ -250,6 +353,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const lightbox = document.getElementById('lightbox');
   const lightboxIframe = document.getElementById('lightbox-iframe');
   const lightboxClose = document.getElementById('lightbox-close');
+  const lightboxVideo = document.getElementById('lightbox-video');
   // Stills Lightbox modal elements (specifically for photos)
   const stillsLightbox = document.getElementById('stills-lightbox');
   const stillsLightboxImg = document.getElementById('stills-lightbox-img');
@@ -262,11 +366,17 @@ document.addEventListener('DOMContentLoaded', () => {
   let currentOverlayProject = null;
   let currentLightboxPhotoIndex = 0;
   // === 1. POPULATE INITIAL VIEWS ---
-  function renderMovingList() {
+  function renderMovingList(filterCategory = 'all') {
     if (!movingContainer) return;
     movingContainer.innerHTML = '';
     
-    movingProjects.forEach((proj) => {
+    // Filter projects based on category selection
+    const filteredProjects = movingProjects.filter(proj => {
+      if (filterCategory === 'all') return true;
+      return proj.category === filterCategory;
+    });
+    
+    filteredProjects.forEach((proj) => {
       const card = document.createElement('div');
       card.className = 'moving-card fade-up-animation';
       card.setAttribute('data-slug', proj.slug);
@@ -316,7 +426,7 @@ document.addEventListener('DOMContentLoaded', () => {
       stillsContainer.appendChild(card);
     });
   }
-  renderMovingList();
+  renderMovingList('all');
   renderStillsGrid();
   // === 2. TAB SWITCHER FUNCTIONALITY ===
   function setTab(tabName) {
@@ -356,19 +466,41 @@ document.addEventListener('DOMContentLoaded', () => {
   if (switcherStills) {
     switcherStills.addEventListener('click', () => setTab('stills'));
   }
+  
+  // Setup click listeners for sub-filters (All / Personal / Commercial)
+  const subFilterBtns = document.querySelectorAll('.sub-filter-btn');
+  subFilterBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      // Remove active class from all buttons
+      subFilterBtns.forEach(b => b.classList.remove('active'));
+      // Add active class to clicked button
+      btn.classList.add('active');
+      
+      const filter = btn.dataset.filter;
+      renderMovingList(filter);
+    });
+  });
   // Setup click listeners for video player play trigger in details overlay
   if (detailsPlayBtn) {
     detailsPlayBtn.addEventListener('click', (e) => {
       e.stopPropagation();
-      if (currentOverlayProject && currentOverlayProject.youtubeId) {
-        openVideoPlayer(currentOverlayProject.youtubeId);
+      if (currentOverlayProject) {
+        if (currentOverlayProject.youtubeId) {
+          openVideoPlayer(currentOverlayProject.youtubeId, null);
+        } else if (currentOverlayProject.videoPath) {
+          openVideoPlayer(null, currentOverlayProject.videoPath);
+        }
       }
     });
   }
   if (detailsCover) {
     detailsCover.addEventListener('click', () => {
-      if (currentOverlayProject && currentOverlayProject.youtubeId) {
-        openVideoPlayer(currentOverlayProject.youtubeId);
+      if (currentOverlayProject) {
+        if (currentOverlayProject.youtubeId) {
+          openVideoPlayer(currentOverlayProject.youtubeId, null);
+        } else if (currentOverlayProject.videoPath) {
+          openVideoPlayer(null, currentOverlayProject.videoPath);
+        }
       }
     });
   }
@@ -407,7 +539,7 @@ document.addEventListener('DOMContentLoaded', () => {
     detailsCoverImg.alt = `${proj.title} Cover`;
     
     // Setup Play video click trigger on cover or button
-    if (proj.youtubeId) {
+    if (proj.youtubeId || proj.videoPath) {
       detailsCover.classList.add('video-playable');
       detailsPlayBtn.style.display = 'flex';
     } else {
@@ -509,14 +641,33 @@ document.addEventListener('DOMContentLoaded', () => {
   if (window.location.hash) {
     setTimeout(handleHashRoute, 200);
   }
-  // === 5. VIDEO IFRAME POPUP PLAYER ===
-  function openVideoPlayer(youtubeId) {
-    window.open(`https://www.youtube.com/watch?v=${youtubeId}`, '_blank');
+  // === 5. VIDEO POPUP PLAYER ===
+  function openVideoPlayer(youtubeId, videoPath) {
+    if (youtubeId) {
+      window.open(`https://www.youtube.com/watch?v=${youtubeId}`, '_blank');
+    } else if (videoPath) {
+      if (lightbox && lightboxVideo && lightboxIframe) {
+        lightboxIframe.style.display = 'none';
+        lightboxIframe.src = '';
+        lightboxVideo.src = videoPath;
+        lightboxVideo.style.display = 'block';
+        lightbox.classList.add('open');
+        document.body.style.overflow = 'hidden';
+      }
+    }
   }
   function closeVideoPlayer() {
-    if (lightbox && lightboxIframe) {
+    if (lightbox) {
       lightbox.classList.remove('open');
-      lightboxIframe.src = '';
+      if (lightboxIframe) {
+        lightboxIframe.src = '';
+        lightboxIframe.style.display = 'block';
+      }
+      if (lightboxVideo) {
+        lightboxVideo.pause();
+        lightboxVideo.src = '';
+        lightboxVideo.style.display = 'none';
+      }
       
       // If we closed the video and details overlay is open, keep body scrolling disabled
       if (currentOverlayProject) {
