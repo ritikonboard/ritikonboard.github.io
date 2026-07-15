@@ -493,11 +493,7 @@ document.addEventListener('DOMContentLoaded', () => {
   }
   // === 5. VIDEO IFRAME POPUP PLAYER ===
   function openVideoPlayer(youtubeId) {
-    if (lightbox && lightboxIframe) {
-      lightboxIframe.src = `https://www.youtube.com/embed/${youtubeId}?autoplay=1&rel=0&modestbranding=1`;
-      lightbox.classList.add('open');
-      document.body.style.overflow = 'hidden';
-    }
+    window.open(`https://www.youtube.com/watch?v=${youtubeId}`, '_blank');
   }
   function closeVideoPlayer() {
     if (lightbox && lightboxIframe) {
