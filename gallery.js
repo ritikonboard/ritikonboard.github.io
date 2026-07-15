@@ -242,7 +242,7 @@ document.addEventListener('DOMContentLoaded', () => {
       type: "COMMERCIAL AD",
       year: "2025",
       role: "Director & Editor",
-      videoPath: "assets/ADs (tried to be creative)/Park Plaza Ads/cut the noise AD.mp4",
+      videoPath: "assets/ADs (tried to be creative)/Park Plaza Ads/cut the noise ad compressed.mp4",
       coverImage: "https://images.unsplash.com/photo-1566073771259-6a8506099945?q=80&w=600",
       synopsis: "",
       credits: {
