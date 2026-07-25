@@ -567,17 +567,14 @@ document.addEventListener('DOMContentLoaded', () => {
       detailsSynopsis.innerText = proj.synopsis;
       detailsSynopsis.style.display = 'block';
       if (creditsTable) {
-        if (window.innerWidth >= 768) {
-          creditsTable.style.gridTemplateColumns = '2fr 1fr';
-        } else {
-          creditsTable.style.gridTemplateColumns = '1fr';
-        }
+        creditsTable.style.display = 'grid';
+        creditsTable.style.gridTemplateColumns = '1fr';
       }
     } else {
       detailsSynopsis.innerText = '';
       detailsSynopsis.style.display = 'none';
       if (creditsTable) {
-        creditsTable.style.gridTemplateColumns = '1fr';
+        creditsTable.style.display = 'none';
       }
     }
     
@@ -594,18 +591,11 @@ document.addEventListener('DOMContentLoaded', () => {
       detailsPlayBtn.style.display = 'none';
     }
     
-    // Set Credits
-    detailsCreditsList.innerHTML = '';
-    const entries = Object.entries(proj.credits);
-    entries.forEach(([role, val]) => {
-      const row = document.createElement('div');
-      row.className = 'credit-row';
-      row.innerHTML = `
-        <span class="credit-label">${role}</span>
-        <span class="credit-value">${val}</span>
-      `;
-      detailsCreditsList.appendChild(row);
-    });
+    // Set Credits (Removed as requested)
+    if (detailsCreditsList) {
+      detailsCreditsList.innerHTML = '';
+      detailsCreditsList.style.display = 'none';
+    }
     
     // Set Scenes
     detailsScenesGallery.innerHTML = '';
